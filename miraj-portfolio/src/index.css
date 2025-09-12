@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@plugin "daisyui"; 
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+*{
+  font-family: "Epunda Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* *{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+ 
+} */
+
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* Bubble animation */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  animation: rise 20s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 16s;
+}
+.bubble:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  left: 30%;
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+.bubble:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  animation-duration: 25s;
+  animation-delay: 4s;
+}
+.bubble:nth-child(4) {
+  width: 20px;
+  height: 20px;
+  left: 70%;
+  animation-duration: 18s;
+  animation-delay: 3s;
+}
+.bubble:nth-child(5) {
+  width: 50px;
+  height: 50px;
+  left: 85%;
+  animation-duration: 22s;
+  animation-delay: 5s;
+}
+.bubble:nth-child(6) {
+  width: 35px;
+  height: 35px;
+  left: 95%;
+  animation-duration: 19s;
+  animation-delay: 6s;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-120vh) scale(1.3); opacity: 0; }
+}
