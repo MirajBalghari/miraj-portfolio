@@ -4,7 +4,7 @@ import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 import miraj from '../assets/miraj.jpg'
 function Herosection() {
-  const cv_url = `${import.meta.env.VITE_Url}/Miraj_CV_.pdf`
+  const cv_url = `${import.meta.env.VITE_Url}/Miraj_Hussain_CV_.pdf`
 
   return (
     <section id="about" className="relative overflow-hidden mt-15 md:p-10 lg:p-20 p-5 mx-auto">
