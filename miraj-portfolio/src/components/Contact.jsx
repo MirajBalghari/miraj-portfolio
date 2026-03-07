@@ -7,13 +7,10 @@ const serviceId = import.meta.env.VITE_Service_Id;
 const templateId = import.meta.env.VITE_Template_Id;
 const publicKey = import.meta.env.VITE_Public_key;
 
-// action function (server-like handler)
 async function handleSubmit(prevState, formData) {
   try {
-    // Convert FormData → plain object
     const values = Object.fromEntries(formData.entries());
 
-    // Send using EmailJS
     await emailjs.send(serviceId, templateId, values, publicKey);
 
     toast.success("Your message was sent ✅");
@@ -31,7 +28,10 @@ function Contact() {
     message: "",
   });
   return (
-    <section id="contact" className="my-20 relative z-10">
+    <section
+      id="contact"
+      className="container px-2 md:px-4 mx-auto md:my-20 my-10 relative z-10"
+    >
       {/* Title */}
       <motion.h1
         initial={{ opacity: 0, y: -40 }}
@@ -50,7 +50,8 @@ function Contact() {
         viewport={{ once: true }}
         className="text-center text-gray-200 mt-2"
       >
-        I’d love to hear from you — reach out for any opportunities or questions!
+        I’d love to hear from you — reach out for any opportunities or
+        questions!
       </motion.p>
 
       {/* Contact Form */}
@@ -60,7 +61,7 @@ function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="mt-10 max-w-xl mx-auto p-8 rounded-2xl shadow-xl 
+        className="mt-10 max-w-xl mx-auto md:p-8 p-4  md:rounded-2xl rounded-xl shadow-xl 
         bg-white/10 backdrop-blur-xl border border-white/20 space-y-5"
       >
         <h2 className="text-lg md:text-2xl text-center font-semibold text-white">
@@ -120,7 +121,7 @@ function Contact() {
           bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 
           hover:from-purple-500 hover:via-pink-500 hover:to-red-500 transition-all duration-500 shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {isPending ? "Sending..." : "Send Message 🚀"}
+          {isPending ? "Sending..." : "Send Message "}
         </motion.button>
       </motion.form>
     </section>
