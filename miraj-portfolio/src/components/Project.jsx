@@ -200,7 +200,7 @@ function Project() {
           </div>
         </div>
         {/* Scroll indicator */}
-        <div className="flex justify-center mt-4 gap-1">
+        <div className="flex md:hidden justify-center mt-4 gap-1">
           <span className="text-xs text-gray-200">← Swipe to see more →</span>
         </div>
 
