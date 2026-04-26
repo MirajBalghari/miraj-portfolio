@@ -2,7 +2,8 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import miraj from "../assets/miraj.jpg";
+import mirajhussain from "../assets/mirajhussain.png";
+
 function Herosection() {
   const cv_url = `${import.meta.env.VITE_Url}/Miraj_Hussain_CV.pdf`;
 
@@ -111,18 +112,18 @@ function Herosection() {
         >
           <Tilt
             glareEnable={true}
-            glareMaxOpacity={0.3}
+            glareMaxOpacity={0}
             tiltMaxAngleX={17}
             tiltMaxAngleY={17}
           >
             <motion.figure
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="md:hover-gallery relative w-full h-full  md:ring-20  ring-white/15 rounded-full"
+              className=" relative w-full h-full  md:ring-10  ring-white/15 rounded-full"
             >
               <img
                 className="md:w-80 md:h-80  lg:w-90 lg:h-90 w-65 h-65 rounded-full   mx-auto object-cover transition-transform duration-300 hover:scale-105 hover:rotate-3"
-                src={miraj}
+                src={mirajhussain}
                 alt="profile"
               />
             </motion.figure>

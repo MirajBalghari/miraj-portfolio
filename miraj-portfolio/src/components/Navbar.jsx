@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import miraj from "../assets/miraj.jpg";
+
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -91,22 +91,13 @@ function Navbar() {
         </div>
 
         {/* Navbar Center */}
-        <div className="navbar-center md:ml-20 lg:ml-0">
+        <div className="navbar-end mr-5 md:mr-0 ">
           <a className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-green-300 bg-clip-text text-transparent">
             Miraj Balghari
           </a>
         </div>
 
-        {/* Navbar End */}
-        <div className="navbar-end">
-          <motion.img
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="md:w-12 md:h-12 h-10 w-10 rounded-full border-2 object-cover border-white/30"
-            src={miraj}
-            alt="profile"
-          />
-        </div>
+    
       </div>
     </motion.div>
   );
